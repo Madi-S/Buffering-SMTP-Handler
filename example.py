@@ -3,7 +3,6 @@ import logging.handlers   # To create own handler
 import smtplib            # Package to send emails
 
 
-
 class BufferingSMTPHandler(logging.handlers.BufferingHandler):
     def __init__(self, capacity, fromaddr, toaddr, password, subject='Critcal logs'):    # Init method to take email addrs, password, capacity and subject
         logging.handlers.BufferingHandler.__init__(self, capacity)
